@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.example.lab5.TitleFragment"
+        android:label="TitleFragment" >
+        <action
+            android:id="@+id/action_titleFragment_to_optionFragment"
+            app:destination="@id/optionFragment" />
+        <action
+            android:id="@+id/action_titleFragment_to_agregarPregunta"
+            app:destination="@id/Pregunta" />
+        <action
+            android:id="@+id/action_titleFragment_to_acercaDe"
+            app:destination="@id/acercaDe" />
+    </fragment>
+    <fragment
+        android:id="@+id/optionFragment"
+        android:name="com.example.lab5.OptionFragment"
+        android:label="fragment_option"
+        tools:layout="@layout/fragment_option" />
+    <fragment
+        android:id="@+id/Pregunta"
+        android:name="com.example.lab5.AgregarPregunta"
+        android:label="preguntas"
+        tools:layout="@layout/fragment_agregar_pregunta" >
+        <action
+            android:id="@+id/action_Pregunta_to_resultados"
+            app:destination="@id/resultados" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultados"
+        android:name="com.example.lab5.Resultados"
+        android:label="fragment_resultados"
+        tools:layout="@layout/fragment_resultados" />
+    <fragment
+        android:id="@+id/acercaDe"
+        android:name="com.example.lab5.AcercaDe"
+        android:label="fragment_acerca_de"
+        tools:layout="@layout/fragment_acerca_de" />
+</navigation>
